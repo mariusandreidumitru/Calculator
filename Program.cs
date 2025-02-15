@@ -18,21 +18,21 @@ Console.WriteLine("[M]ultiply numbers");
 
 var choice = Console.ReadLine();
 
-if (choice == "A" || choice == "a")
+if (EqualsCaseInsensitive(choice,"A"))
 {
     var sum = number1 + number2;
     PrintFinalEquation(number1, number2, sum, "+");
 
 }
-else if (choice == "S" || choice == "s")
+else if (EqualsCaseInsensitive(choice, "S"))
 {
     var difference = number1 - number2;
-    Console.WriteLine(number1 + "-" + number2 + "=" + difference);
+    PrintFinalEquation(number1, number2, difference, "-");
 }
-else if (choice == "M" || choice == "M")
+else if (EqualsCaseInsensitive(choice, "M"))
 {
-    var multi = number1 * number2;
-    Console.WriteLine(number1 + "*" + number2 + "=" + multi);
+    var multiplication = number1 * number2;
+    Console.WriteLine(number1 + "*" + number2 + "=" + multiplication);
 }
 else
 {
